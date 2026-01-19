@@ -17,22 +17,22 @@ cask "same" do
   on_macos do
     on_intel do
       url "https://github.com/traiproject/same/releases/download/v#{version}/same_#{version}_macOS_x86_64.tar.gz"
-      sha256 "988b49d896e400a1e1a8718efeb585bfe39234f4621fba3004b9c1e93ceb39d4"
+      sha256 "d388e0242d74af3729ce1e00c9a9e97e13609218e40c394b1fdcbae5b48c909f"
     end
     on_arm do
       url "https://github.com/traiproject/same/releases/download/v#{version}/same_#{version}_macOS_arm64.tar.gz"
-      sha256 "1461ff703666742a02aec320bc3cddd8d0d3d083c2c334c2559e02124162b15d"
+      sha256 "83b83365a74427038e466438c2a73b7b62943e633f99573b6c8205d6c6202dab"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/traiproject/same/releases/download/v#{version}/same_#{version}_linux_x86_64.tar.gz"
-      sha256 "9853b2a0bbf531d9f11a6340d788550c6525ffc8884b0c6edeee12470b04eb7b"
+      sha256 "2de9313a859297e69b2ee363d0091e4e715c6a244678cfc81b408a025dbdb5c4"
     end
     on_arm do
       url "https://github.com/traiproject/same/releases/download/v#{version}/same_#{version}_linux_arm64.tar.gz"
-      sha256 "09a081877b45f53b68c3344ef92f60416b7ec292859e038120bb971c2e5818ab"
+      sha256 "a7df59ec877f1c39550328711f3ab6d07ff95be7da274d6b60a41d80d15ba904"
     end
   end
 
