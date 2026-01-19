@@ -23,13 +23,14 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
+          token: ${{ github.token }}
+          persist-credentials: true
 
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
           stable: true
-          test-bot: false
 
       - name: Cache Homebrew gems
         id: cache
@@ -74,6 +75,8 @@ jobs:
       - name: Commit and push auto-fixes (same-repo PRs only)
         if: steps.casks.outputs.found == 'true' && github.event.pull_request.head.repo.full_name == github.repository
         shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
 
@@ -88,5 +91,8 @@ jobs:
           mapfile -t files < casks_changed.txt
           git add "${files[@]}"
           git commit -m "style(cask): auto-fix (brew style --fix)"
-          git push origin "HEAD:${{ github.head_ref }}"
+
+          # Make HTTPS pushes non-interactive + authenticated
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push origin "HEAD:${GITHUB_HEAD_REF}"
 
