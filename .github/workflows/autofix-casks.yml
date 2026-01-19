@@ -2,7 +2,6 @@ name: Auto-fix Casks
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - "Casks/**/*.rb"
 
