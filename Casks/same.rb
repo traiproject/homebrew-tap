@@ -3,7 +3,7 @@ cask "same" do
   name "same"
   desc "Modern build tool for monorepos"
   homepage "https://github.com/traiproject/same"
-  version "0.1.2"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "same" do
   on_macos do
     on_intel do
       url "https://github.com/traiproject/same/releases/download/v#{version}/same_#{version}_macOS_x86_64.tar.gz"
-      sha256 "c7373ccdd7b6f929709a72c4d81bc60b0078d327485b7546d4c580aeacac5003"
+      sha256 "988b49d896e400a1e1a8718efeb585bfe39234f4621fba3004b9c1e93ceb39d4"
     end
     on_arm do
       url "https://github.com/traiproject/same/releases/download/v#{version}/same_#{version}_macOS_arm64.tar.gz"
-      sha256 "65476ba3bfb78ab6faddcbdf4f7023cb148343ec94f7e6e8d0b9f305ee0596ae"
+      sha256 "1461ff703666742a02aec320bc3cddd8d0d3d083c2c334c2559e02124162b15d"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/traiproject/same/releases/download/v#{version}/same_#{version}_linux_x86_64.tar.gz"
-      sha256 "9527f95d286c3dd706dbb0c8c3d14c9ddef28cbf4d2be837d793a299c3db06a1"
+      sha256 "9853b2a0bbf531d9f11a6340d788550c6525ffc8884b0c6edeee12470b04eb7b"
     end
     on_arm do
       url "https://github.com/traiproject/same/releases/download/v#{version}/same_#{version}_linux_arm64.tar.gz"
-      sha256 "6940a11062533d9c8a7c634402665e7bf815bdbcbf834aa0dfad92559fe55587"
+      sha256 "09a081877b45f53b68c3344ef92f60416b7ec292859e038120bb971c2e5818ab"
     end
   end
 
